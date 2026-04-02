@@ -213,13 +213,12 @@ public class MicroservicesController extends SimEntity {
                 manageResources();
                 break;
             case FogEvents.STOP_SIMULATION:
-                CloudSim.stopSimulation();
+                CloudSim.abruptallyTerminate();
                 printTimeDetails();
                 printPowerDetails();
                 printCostDetails();
                 printNetworkUsageDetails();
                 printQoSDetails();
-                System.exit(0);
                 break;
         }
 

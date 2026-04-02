@@ -95,13 +95,12 @@ public class MicroservicesMobilityClusteringController extends MicroservicesCont
                 processMobility(ev);
                 break;
             case FogEvents.STOP_SIMULATION:
-                CloudSim.stopSimulation();
+                CloudSim.abruptallyTerminate();
                 printTimeDetails();
                 printPowerDetails();
                 printCostDetails();
                 printNetworkUsageDetails();
                 printMigrationDelayDetails();
-                System.exit(0);
                 break;
             default:
                 super.processEvent(ev);

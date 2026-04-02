@@ -158,13 +158,12 @@ public class ClusteringController extends SimEntity {
                 manageResources();
                 break;
             case FogEvents.STOP_SIMULATION:
-                CloudSim.stopSimulation();
+                CloudSim.abruptallyTerminate();
                 printTimeDetails();
                 printPowerDetails();
                 printCostDetails();
                 printNetworkUsageDetails();
                 printMigrationDelayDetails();
-                System.exit(0);
                 break;
 
         }

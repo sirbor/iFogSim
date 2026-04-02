@@ -663,6 +663,7 @@ public class FogDevice extends PowerDatacenter {
             String actuatorType = ((Actuator) CloudSim.getEntity(actuatorId)).getActuatorType();
             if (tuple.getDestModuleName().equals(actuatorType)) {
                 send(actuatorId, delay, FogEvents.TUPLE_ARRIVAL, tuple);
+                NetworkUsageMonitor.sendingTuple(delay, tuple.getCloudletFileSize());
                 return;
             }
         }

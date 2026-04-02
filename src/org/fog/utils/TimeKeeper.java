@@ -162,33 +162,10 @@ public class TimeKeeper {
 	}
 
 	public void addCostCalcData(List<Integer> loopIds, String microserviceName, int deviceId, int tupleId) {
-//		for (Integer loopid : loopIds) {
-//			if (costCalcData.containsKey(loopid)) {
-//				if (costCalcData.get(loopid).containsKey(microserviceName)) {
-//					if (costCalcData.get(loopid).get(microserviceName).containsKey(deviceId)) {
-//						double totalExecutionTime = tupleIdToExecutionTime.get(tupleId) + costCalcData.get(loopid).get(microserviceName).get(deviceId).getSecond();
-//						int totalRequestCount = costCalcData.get(loopid).get(microserviceName).get(deviceId).getFirst() + 1;
-//						costCalcData.get(loopid).get(microserviceName).put(deviceId, new Pair<>(totalRequestCount, totalExecutionTime));
-//					} else {
-//						costCalcData.get(loopid).get(microserviceName).put(deviceId, new Pair<>(1, tupleIdToExecutionTime.get(tupleId)));
-//					}
-//				} else {
-//					Map<Integer, Pair<Integer, Double>> m1 = new HashMap<>();
-//					m1.put(deviceId, new Pair<>(1, tupleIdToExecutionTime.get(tupleId)));
-//
-//					costCalcData.get(loopid).put(microserviceName, m1);
-//				}
-//			} else {
-//				Map<Integer, Pair<Integer, Double>> m1 = new HashMap<>();
-//				m1.put(deviceId, new Pair<>(1, tupleIdToExecutionTime.get(tupleId)));
-//
-//				Map<String, Map<Integer, Pair<Integer, Double>>> m2 = new HashMap<>();
-//				m2.put(microserviceName, m1);
-//
-//				costCalcData.put(loopid, m2);
-//			}
-//		}
 	}
 	
+	public static void reset(){
+		instance = null;
+	}
 	
 }

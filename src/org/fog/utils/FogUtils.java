@@ -30,4 +30,12 @@ public class FogUtils {
 	public static int MAX = 10000000;
 	
 	public static Map<String, GeoCoverage> appIdToGeoCoverageMap = new HashMap<String, GeoCoverage>();
+
+	public static void reset(){
+		TUPLE_ID = 1;
+		ENTITY_ID = 1;
+		ACTUAL_TUPLE_ID = 1;
+		USER_ID = 1;
+		appIdToGeoCoverageMap.clear();
+	}
 }
